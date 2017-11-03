@@ -1,0 +1,21 @@
+{
+  "author": "Damon Yuan",
+  "classifications": [],
+  "description": "template description",
+  "name": "DemoActor",
+  "defaultName": ".NET Core Actor",
+  "identity": ".NET Core Actor",
+  "groupIdentity": ".NET Core Actor",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "",
+  "sourceName": "DemoActor",
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "DemoActor.csproj"
+    }
+  ]
+}
