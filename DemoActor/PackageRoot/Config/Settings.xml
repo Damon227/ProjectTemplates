@@ -1,5 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Section Name="Application">
+    <Parameter Name="Env" Value="[Application_Env]" />
+  </Section>
+  <Section Name="Logging">
+    <Parameter Name="ApplicationInsightsLogger_MinLevel" Value="[Logging_ApplicationInsightsLogger_MinLevel]" />
+    <Parameter Name="ApplicationInsightsLogger_EnableAynsc" Value="[Logging_ApplicationInsightsLogger_EnableAynsc]" />
+    <Parameter Name="ApplicationInsightsLogger_LogLevel_Default" Value="[Logging_ApplicationInsightsLogger_LogLevel_Default]" />
+    <Parameter Name="ApplicationInsightsLogger_LogLevel_System" Value="[Logging_ApplicationInsightsLogger_LogLevel_System]" />
+    <Parameter Name="ApplicationInsightsLogger_LogLevel_Microsoft" Value="[Logging_ApplicationInsightsLogger_LogLevel_Microsoft]" />
+    <Parameter Name="TraceLogger_MinLevel" Value="[Logging_TraceLogger_MinLevel]" />
+    <Parameter Name="TraceLogger_EnableAynsc" Value="[Logging_TraceLogger_EnableAynsc]" />
+    <Parameter Name="TraceLogger_LogLevel_Default" Value="[Logging_TraceLogger_LogLevel_Default]" />
+    <Parameter Name="ConsoleLogger_MinLevel" Value="[Logging_ConsoleLogger_MinLevel]" />
+    <Parameter Name="ConsoleLogger_EnableAynsc" Value="[Logging_ConsoleLogger_EnableAynsc]" />
+    <Parameter Name="ConsoleLogger_Colored" Value="[Logging_ConsoleLogger_Colored]" />
+    <Parameter Name="ConsoleLogger_LogLevel_Default" Value="[Logging_ConsoleLogger_LogLevel_Default]" />
+    <Parameter Name="FileLogger_MinLevel" Value="[Logging_FileLogger_MinLevel]" />
+    <Parameter Name="FileLogger_EnableAynsc" Value="[Logging_FileLogger_EnableAynsc]" />
+    <Parameter Name="FileLogger_LogFileTemplate" Value="[Logging_FileLogger_LogFileTemplate]" />
+    <Parameter Name="FileLogger_LogLevel_Default" Value="[Logging_FileLogger_LogLevel_Default]" />
+    <Parameter Name="FileLogger_LogLevel_System" Value="[Logging_FileLogger_LogLevel_System]" />
+    <Parameter Name="FileLogger_LogLevel_Microsoft" Value="[Logging_FileLogger_LogLevel_Microsoft]" />
+    <Parameter Name="DatabaseLogger_MinLevel" Value="[Logging_DatabaseLogger_MinLevel]" />
+    <Parameter Name="DatabaseLogger_EnableAynsc" Value="[Logging_DatabaseLogger_EnableAynsc]" />
+    <Parameter Name="DatabaseLogger_DatabaseConnectionString" Value="[Logging_DatabaseLogger_DatabaseConnectionString]" />
+    <Parameter Name="DatabaseLogger_LogTableName" Value="[Logging_DatabaseLogger_LogTableName]" />
+    <Parameter Name="DatabaseLogger_LogLevel_Default" Value="[Logging_DatabaseLogger_LogLevel_Default]" />
+    <Parameter Name="DatabaseLogger_LogLevel_System" Value="[Logging_DatabaseLogger_LogLevel_System]" />
+    <Parameter Name="DatabaseLogger_LogLevel_Microsoft" Value="[Logging_DatabaseLogger_LogLevel_Microsoft]" />
+    <Parameter Name="EmailLogger_MinLevel" Value="[Logging_EmailLogger_MinLevel]" />
+    <Parameter Name="EmailLogger_EnableAynsc" Value="[Logging_EmailLogger_EnableAynsc]" />
+    <Parameter Name="EmailLogger_FromEmailAccount" Value="[Logging_EmailLogger_FromEmailAccount]" />
+    <Parameter Name="EmailLogger_FromEmailAccountPassword" Value="[Logging_EmailLogger_FromEmailAccountPassword]" />
+    <Parameter Name="EmailLogger_ToEmailAccount" Value="[Logging_EmailLogger_ToEmailAccount]" />
+    <Parameter Name="EmailLogger_LogLevel_Default" Value="[Logging_EmailLogger_LogLevel_Default]" />
+    <Parameter Name="EmailLogger_Environment" Value="[Application_Env]" />
+  </Section>
+  <Section Name="ApplicationInsights">
+    <Parameter Name="InstrumentationKey" Value="[ApplicationInsights_InstrumentationKey]" />
+    <Parameter Name="TelemetryChannel_DeveloperMode" Value="[ApplicationInsights_TelemetryChannel_DeveloperMode]" />
+  </Section>
+  <Section Name="Data">
+    <Parameter Name="ConnectionString" Value="[Data_ConnectionString]" />
+  </Section>
   <!-- The content will be generated during build -->
   <Section Name="DemoActorReplicatorConfig">
     <Parameter Name="ReplicatorEndpoint" Value="DemoActorReplicatorEndpoint" />
