@@ -11,7 +11,6 @@
 
 
 using System;
-using DemoActor.Interfaces;
 using KC.Foundation.SF.Actors;
 using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
