@@ -10,10 +10,12 @@
 // ***********************************************************************
 
 
+using System.ComponentModel.DataAnnotations.Schema;
 using KC.Foundation.SF.Actors;
 
 namespace DemoActor
 {
+    [Table("", Schema = "dbo")]
     public class DemoActorReminder : KolibreActorReminderBase
     {
         

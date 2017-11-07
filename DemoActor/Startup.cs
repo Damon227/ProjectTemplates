@@ -14,6 +14,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Fabric;
 using KC.Foundation.Data;
 using KC.Foundation.SF;
+using KC.Foundation.SF.AI;
 using KC.Foundation.SF.Logging;
 using KC.Foundation.SF.Logging.AI;
 using KC.Foundation.SF.Logging.Database;
@@ -56,6 +57,7 @@ namespace DemoActor
             services.Configure<FileLoggerOptions>(config.GetSection("Logging:FileLogger"));
             services.Configure<DatabaseLoggerOptions>(config.GetSection("Logging:DatabaseLogger"));
             services.Configure<EmailLoggerOptions>(config.GetSection("Logging:EmailLogger"));
+            services.AddSingleton<ISFAIInitializer, SFAIInitializer>();
             services.AddApplicationInsightsLogger();
             services.AddTraceLogger();
             services.AddFileLogger();
@@ -71,6 +73,7 @@ namespace DemoActor
             services.Configure<FileLoggerOptions>(config.GetSection("Logging:FileLogger"));
             services.Configure<DatabaseLoggerOptions>(config.GetSection("Logging:DatabaseLogger"));
             services.Configure<EmailLoggerOptions>(config.GetSection("Logging:EmailLogger"));
+            services.AddSingleton<ISFAIInitializer, SFAIInitializer>();
             services.AddApplicationInsightsLogger();
             services.AddFileLogger();
             services.AddDatabaseLogger();
@@ -85,6 +88,7 @@ namespace DemoActor
             services.Configure<FileLoggerOptions>(config.GetSection("Logging:FileLogger"));
             services.Configure<DatabaseLoggerOptions>(config.GetSection("Logging:DatabaseLogger"));
             services.Configure<EmailLoggerOptions>(config.GetSection("Logging:EmailLogger"));
+            services.AddSingleton<ISFAIInitializer, SFAIInitializer>();
             services.AddApplicationInsightsLogger();
             services.AddFileLogger();
             services.AddDatabaseLogger();
