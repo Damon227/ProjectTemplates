@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Section Name="DemoActorServiceReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="DemoActorServiceReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="DemoActorServiceReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+  <!-- The content will be generated during build -->
   <Section Name="Application">
     <Parameter Name="Env" Value="[Application_Env]" />
   </Section>
@@ -43,13 +51,5 @@
   </Section>
   <Section Name="Data">
     <Parameter Name="ConnectionString" Value="[Data_ConnectionString]" />
-  </Section>
-  <!-- The content will be generated during build -->
-  <Section Name="DemoActorReplicatorConfig">
-    <Parameter Name="ReplicatorEndpoint" Value="DemoActorReplicatorEndpoint" />
-    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
-  </Section>
-  <Section Name="DemoActorReplicatorSecurityConfig">
-    <Parameter Name="CredentialType" Value="None" />
   </Section>
 </Settings>

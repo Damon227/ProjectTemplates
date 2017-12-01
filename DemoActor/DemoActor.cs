@@ -11,12 +11,14 @@
 
 
 using System;
+using System.Threading.Tasks;
 using KC.Foundation.SF.Actors;
 using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
 
 namespace DemoActor
 {
+    [ActorService(Name = "DemoActorService")]
     internal class DemoActor : KolibreActorBase<DemoActorState>, IDemoActor
     {
         /// <summary>
@@ -34,6 +36,15 @@ namespace DemoActor
         public DemoActor(ActorService actorService, ActorId actorId, IServiceProvider serviceProvider) 
             : base(actorService, actorId, serviceProvider)
         {
+        }
+
+        /// <summary>
+        ///     This method is called whenever an actor is activated.
+        ///     An actor is activated the first time any of its methods are invoked.
+        /// </summary>
+        protected override Task OnActivateAsync()
+        {
+            return Task.FromResult(0);
         }
     }
 }
